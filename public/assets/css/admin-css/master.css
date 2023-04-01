@@ -1,0 +1,12 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.layoutSidenav {
+    margin: 0;
+    padding: 0;
+}
+
+.layoutSidebar_content {
+    margin: 40px 30px 0px 40px;
+}
