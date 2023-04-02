@@ -11,7 +11,7 @@
         </a>
       </li>
       <li>
-        <a href="order" class="nav-link text-white ">
+        <a href="order" class="nav-link text-white cl">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
           Orders
         </a>
@@ -26,6 +26,12 @@
         <a href="customer" class="nav-link text-white">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
           Customers
+        </a>
+      </li>
+      <li>
+        <a href="users" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+          User
         </a>
       </li>
     </ul>

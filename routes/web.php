@@ -29,6 +29,9 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
     Route::get('/customer', [App\Http\Controllers\Admin\CustomerController::class, 'index']);
     Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'index']);
 
-});
 
-// ->middleware(['auth','isAdmin'])
+    Route::get('users', [App\Http\Controllers\Admin\UserController::class, 'index']);
+    Route::get('users/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'edit']);
+    Route::put('update-user/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update']);
+
+});
