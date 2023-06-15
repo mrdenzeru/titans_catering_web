@@ -17,7 +17,7 @@
                                     <th>Name</th>
                                     <th>Email</th>
                                     <th>Status</th>
-                                    <th>Edit</th>
+                                    <th>Setting</th>
                                 </tr>
                             </thead>
                             <tbody>

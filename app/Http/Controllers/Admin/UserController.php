@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -27,7 +28,9 @@ class UserController extends Controller
         {
             $user->role_as = $request->role_as;
             $user->update();
-            return redirect()->with('');
+            return redirect('admin/users')->with('status', 'Updated Successfully');
         }
+
+        return redirect('admin/users')->with('status','No User Found');
     }
 }

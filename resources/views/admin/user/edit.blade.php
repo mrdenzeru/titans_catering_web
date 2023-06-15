@@ -15,6 +15,12 @@
 
                     <div class="card-body">
                         
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
                             <div class="mb-3">
                                 <label>Full Name</label>
                                 <p class="form-control">{{ $user->name }}</p>
@@ -30,7 +36,7 @@
                                 <p class="form-control">{{ $user->created_at->format('d/m/y') }}</p>
                             </div>
 
-                        <form action="{{ url('admin/update-user'.$user->id) }}" method="POST">
+                        <form action="{{ url('admin/update-user/'.$user->id) }}" method="POST">
                             @csrf
                             @method('PUT')
 

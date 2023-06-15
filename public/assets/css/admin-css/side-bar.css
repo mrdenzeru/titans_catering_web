@@ -1,10 +1,14 @@
-.logo-admin{
+.logo-admin {
     text-align: center;
     font-weight: 600;
     padding: 0px 5px 5px 15px;
 }
 
-.nav li{
+.nav li {
     padding-left: 10px;
+}
+
+.nav-link {
+    background-color: #00008b;
 }
 

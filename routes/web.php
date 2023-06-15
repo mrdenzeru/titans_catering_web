@@ -22,15 +22,26 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// admin-product-route
+Route::match(['post', 'get'], '/product', [App\Http\Controllers\Admin\ProductController::class, 'store']);
+Route::match(['post', 'get'],'/fetch-product', [App\Http\Controllers\Admin\ProductController::class, 'fetchproduct']);
+Route::match(['post', 'get'],'/edit-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'edit']);
+Route::match(['post', 'get'],'/update-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'update']);
+Route::delete('/delete-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
+
+
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
 
-    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
-    Route::get('/order', [App\Http\Controllers\Admin\OrdersController::class, 'index']);
-    Route::get('/customer', [App\Http\Controllers\Admin\CustomerController::class, 'index']);
-    Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'index']);
+    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/customer', [App\Http\Controllers\Admin\CustomerController::class, 'index'])->name('admin.customer');
 
 
-    Route::get('users', [App\Http\Controllers\Admin\UserController::class, 'index']);
+    // Product-Route    
+    Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.product');    
+    
+
+    // User-Route
+    Route::get('users', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users');
     Route::get('users/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'edit']);
     Route::put('update-user/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update']);
 
