@@ -20,7 +20,7 @@ $(document).ready(function() {
                 $.each(response.product, function (key, item) {
                     $('tbody').append('<tr>\
                                 <td>'+item.id+'</td>\
-                                <td><img src="http://localhost:8000/uploads/products/'+item.image+'" width="110px" height="150px"></td>\
+                                <td><img src="http://localhost:8000/uploads/products/'+item.image+' "width="110px" height="150px"></td>\
                                 <td>'+item.name+'</td>\
                                 <td>'+item.description+'</td>\
                                 <td>\

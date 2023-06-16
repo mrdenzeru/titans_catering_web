@@ -22,13 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// admin-product-route
-Route::match(['post', 'get'], '/product', [App\Http\Controllers\Admin\ProductController::class, 'store']);
-Route::match(['post', 'get'],'/fetch-product', [App\Http\Controllers\Admin\ProductController::class, 'fetchproduct']);
-Route::match(['post', 'get'],'/edit-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'edit']);
-Route::match(['post', 'get'],'/update-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'update']);
-Route::delete('/delete-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
-
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
 
@@ -46,3 +39,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
     Route::put('update-user/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update']);
 
 });
+
+    // admin-product-route
+    Route::match(['post', 'get'], '/product', [App\Http\Controllers\Admin\ProductController::class, 'store']);
+    Route::match(['post', 'get'],'/fetch-product', [App\Http\Controllers\Admin\ProductController::class, 'fetchproduct']);
+    Route::match(['post', 'get'],'/edit-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'edit']);
+    Route::match(['post', 'get'],'/update-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'update']);
+    Route::delete('/delete-product/{id}', [App\Http\Controllers\Admin\ProductController::class, 'destroy']);
