@@ -7,8 +7,8 @@
       <div class="front">
         <img src="{{ asset('assets/img/5.png') }}" alt="">
         <div class="text">
-          <span class="text-1">Every new friend is a <br> new adventure</span>
-          <span class="text-2">Let's get connected</span>
+          <span class="text-1">You don't need a silver<br> fork to eat good food.</span>
+          <span class="text-2">Yummy!</span>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
                             </span>
                         @enderror
                 </div>
-                <div class="text">
+                <div class="text forget-text">
 
                     @if (Route::has('password.request'))
                         <a href="{{ route('password.request') }}">

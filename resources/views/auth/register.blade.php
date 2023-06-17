@@ -7,8 +7,8 @@
       <div class="front">
         <img src="{{ asset('assets/img/6.png') }}" alt="">
         <div class="text">
-          <span class="text-1">Every new friend is a <br> new adventure</span>
-          <span class="text-2">Let's get connected</span>
+          <span class="text-1">Happiness is a <br> delicious salad</span>
+          <span class="text-2">Eat clean and green.</span>
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@
                     </div>
         
                     <div class="input-box">
-                    <i class="fas fa-lock"></i>
+                    <i class="fa-solid fa-unlock"></i>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Enter your password">
         
                         @error('password')
@@ -69,7 +69,7 @@
             
                     </div>
         
-                    <div class="text sign-up-text">Already have an account? <a href="{{ route('login') }}">Login now</a></div>
+                    <div class="text login-text">Already have an account? <a href="{{ route('login') }}">Login now</a></div>
         
                 </div>
         
