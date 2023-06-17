@@ -7,7 +7,9 @@
       <div class="front">
         <img src="{{ asset('assets/img/6.png') }}" alt="">
         <div class="text">
-          <span class="text-1">Happiness is a <br> delicious salad</span>
+            <a class="text-1" href="{{ url('/') }}">
+                <h1>TitansCatering<span class="dot">.</span></h1>
+            </a>
           <span class="text-2">Eat clean and green.</span>
         </div>
       </div>

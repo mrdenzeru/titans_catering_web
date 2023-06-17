@@ -7,7 +7,9 @@
       <div class="front">
         <img src="{{ asset('assets/img/5.png') }}" alt="">
         <div class="text">
-          <span class="text-1">You don't need a silver<br> fork to eat good food.</span>
+            <a class="text-1" href="{{ url('/') }}">
+                <h1>TitansCatering<span class="dot">.</span></h1>
+            </a>
           <span class="text-2">Yummy!</span>
         </div>
       </div>
