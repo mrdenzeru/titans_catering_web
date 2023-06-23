@@ -26,16 +26,15 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function (){
 
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('admin.dashboard');
-    Route::get('/customer', [App\Http\Controllers\Admin\CustomerController::class, 'index'])->name('admin.customer');
-
-    // Product-Route    
-    Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.product');    
-    
+    Route::get('/customer', [App\Http\Controllers\Admin\CustomerController::class, 'index'])->name('admin.customer');    
 
     // User-Route
     Route::get('users', [App\Http\Controllers\Admin\UserController::class, 'index'])->name('admin.users');
     Route::get('users/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'edit']);
     Route::put('update-user/{user_id}', [App\Http\Controllers\Admin\UserController::class, 'update']);
+
+    // Product-Route    
+    Route::get('/product', [App\Http\Controllers\Admin\ProductController::class, 'index'])->name('admin.product');
 
 });
 
